@@ -7,7 +7,7 @@
    5. Вводим число 2
    6. Вводим строку больше 1024 символов - получаем SegFault ![img2](./img/address-segfault.png)
 3. Компилируем код "безопасно" (сама лабораторная работа)
-   1. Запускам `gcc -Wall -Wextra -Wextra -Warray-bounds -fstack-protector-strong -fsanitize=alignment,bool,bounds,builtin,float-cast-overflow,integer-divide-by-zero,nonnull-attribute,null,pointer-overflow,return,returns-nonnull-attribute,shift,signed-integer-overflow,unreachable,vla-bound -O2 code/wisdom-alt.c`
+   1. Запускам `gcc -Wall -Wextra -Wextra -Warray-bounds -fstack-protector-strong -fsanitize=alignment,bool,bounds,builtin,float-cast-overflow,integer-divide-by-zero,nonnull-attribute,null,pointer-overflow,return,returns-nonnull-attribute,shift,signed-integer-overflow,unreachable,vla-bound,address -O2 code/wisdom-alt.c`
    2. Запускаем `./a.out`
    3. Вводим число больше 3 - получаем [ошибку с описанием того что произошло](./output/undefined-behavior-sanitizer.log) ![img3](./img/undefined-behavior-sanitizer.png)
    4. Перезапускаем 
