@@ -1,0 +1,1 @@
+gcc -Wall -Wextra -Wextra -Warray-bounds -fstack-protector-strong -fsanitize=alignment,bool,bounds,builtin,float-cast-overflow,integer-divide-by-zero,nonnull-attribute,null,pointer-overflow,return,returns-nonnull-attribute,shift,signed-integer-overflow,unreachable,vla-bound -O2 code/wisdom-alt.c

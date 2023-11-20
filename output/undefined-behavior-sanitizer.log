@@ -1,0 +1,6 @@
+Hello there
+1. Receive wisdom
+2. Add wisdom
+Selection >54
+code/wisdom-alt.c:101:20: runtime error: index 54 out of bounds for type 'fptr[3]' (aka 'void (*[3])(void)')
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior code/wisdom-alt.c:101:20 in 
