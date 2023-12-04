@@ -1,0 +1,26 @@
+Hello there
+1. Receive wisdom
+2. Add wisdom
+Selection >0
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==74152==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x000000000000 bp 0x00016d76f480 sp 0x00016d76ef40 T0)
+==74152==Hint: pc points to the zero page.
+==74152==The signal is caused by a READ memory access.
+==74152==Hint: address points to the zero page.
+    #0 0x0  (<unknown module>)
+    #1 0x18aceff24  (<unknown module>)
+
+==74152==Register values:
+ x[0] = 0x0000000102698280   x[1] = 0x000000016d76eef8   x[2] = 0x0000000102698280   x[3] = 0x00000001e60d8778
+ x[4] = 0x000000016d76efc0   x[5] = 0x0000000000000000   x[6] = 0x0000000000000000   x[7] = 0x0000000000000000
+ x[8] = 0x0000000000000000   x[9] = 0x0000000000000001  x[10] = 0x000000702db0ddec  x[11] = 0x000000002daeddec
+x[12] = 0x000000002daeddec  x[13] = 0x0000000000000000  x[14] = 0x00000000f1f1f1f1  x[15] = 0x00000000ffffffda
+x[16] = 0x000000018aee8364  x[17] = 0x0000000102b909e8  x[18] = 0x0000000000000000  x[19] = 0x000000016d76f3e0
+x[20] = 0x000000016d76ef40  x[21] = 0x000000702db0dde8  x[22] = 0x000000016d76ef60  x[23] = 0x0000000000000000
+x[24] = 0x0000000102698000  x[25] = 0x0000000102698280  x[26] = 0x0000000102698000  x[27] = 0x0000000000000000
+x[28] = 0x0000007000020000     fp = 0x000000016d76f480     lr = 0x0000000102693938     sp = 0x000000016d76ef40
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV (<unknown module>)
+==74152==ABORTING
+[1]    74152 abort      ./a.out
